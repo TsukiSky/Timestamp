@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/activity_main.xml" value="0.2786458333333333" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.153" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.153" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/activity_main.xml" value="0.14285714285714285" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/activity_main2.xml" value="0.2786458333333333" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/fragment_dashboard.xml" value="0.12864583333333332" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_bottom_navbar.xml" value="0.2857142857142857" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.12864583333333332" />
       </map>
     </option>
   </component>
