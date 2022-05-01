@@ -9,9 +9,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.siqi.timestamp.framgments.CalendarFragment;
-import com.siqi.timestamp.framgments.FragmentAdapter;
-import com.siqi.timestamp.framgments.ProjectFragement;
+import com.siqi.timestamp.calendar.CalendarFragment;
+import com.siqi.timestamp.project.ProjectFragement;
 import com.siqi.timestamp.today.TodayFragment;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.siqi.timestamp.framgments;
+package com.siqi.timestamp.project;
 
 import android.os.Bundle;
 

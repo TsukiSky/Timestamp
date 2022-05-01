@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/calendarFragment"
-        android:name="com.siqi.timestamp.framgments.CalendarFragment"
+        android:name="com.siqi.timestamp.calendar.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" />
     <fragment
@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_today" />
     <fragment
         android:id="@+id/projectFragement"
-        android:name="com.siqi.timestamp.framgments.ProjectFragement"
+        android:name="com.siqi.timestamp.project.ProjectFragement"
         android:label="fragment_project"
         tools:layout="@layout/fragment_project" />
 </navigation>
