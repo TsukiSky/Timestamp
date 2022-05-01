@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_calendar" />
     <fragment
         android:id="@+id/todayFragment"
-        android:name="com.siqi.timestamp.framgments.TodayFragment"
+        android:name="com.siqi.timestamp.today.TodayFragment"
         android:label="fragment_today"
         tools:layout="@layout/fragment_today" />
     <fragment

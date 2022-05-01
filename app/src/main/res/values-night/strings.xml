@@ -6,4 +6,6 @@
     <string name="project_icon">project icon</string>
     <string name="today_icon">today icon</string>
     <string name="calendar_icon">calendar icon</string>
+    <string name="add_icon">add icon</string>
+    <string name="ic_down">ic_down</string>
 </resources>

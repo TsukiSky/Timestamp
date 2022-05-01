@@ -8,4 +8,6 @@
     <string name="calendar_icon">calendar icon</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_icon">add icon</string>
+    <string name="ic_down">ic_down</string>
 </resources>
