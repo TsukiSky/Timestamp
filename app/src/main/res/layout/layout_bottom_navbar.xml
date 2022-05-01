@@ -3,7 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:id="@+id/id_bottom_nav">
 
     <!--  block draws a black line to separate the navbar and the viewpage  -->
     <TextView

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/calendarFragment">
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.siqi.timestamp.framgments.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/todayFragment"
+        android:name="com.siqi.timestamp.framgments.TodayFragment"
+        android:label="fragment_today"
+        tools:layout="@layout/fragment_today" />
+    <fragment
+        android:id="@+id/projectFragement"
+        android:name="com.siqi.timestamp.framgments.ProjectFragement"
+        android:label="fragment_project"
+        tools:layout="@layout/fragment_project" />
+</navigation>

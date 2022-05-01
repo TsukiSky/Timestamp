@@ -10,6 +10,12 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.siqi.timestamp.framgments.CalendarFragment;
+import com.siqi.timestamp.framgments.FragmentAdapter;
+import com.siqi.timestamp.framgments.ProjectFragement;
+import com.siqi.timestamp.framgments.TodayFragment;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -44,8 +50,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initPage() {
         viewPager = findViewById(R.id.id_viewpage);
         ArrayList<Fragment> fragments = new ArrayList<>();
-//        fragments.add()
+        fragments.add(CalendarFragment.newInstance());
+        fragments.add(TodayFragment.newInstance());
+        fragments.add(ProjectFragement.newInstance());
 
+        FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager(), getLifecycle(), fragments);
+        viewPager.setAdapter(fragmentAdapter);
+        viewPager.setCurrentItem(1, false);
+        viewPager.setPageTransformer(null);
     }
 
     private void changeTab(int pos){
@@ -53,17 +65,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (pos){
             case R.id.id_tab_calendar:
-                viewPager.setCurrentItem(0);
+                viewPager.setCurrentItem(0, false);
                 ivCalendar.setSelected(true);
                 ivCurrent = ivCalendar;
                 break;
             case R.id.id_tab_today:
-                viewPager.setCurrentItem(1);
+                viewPager.setCurrentItem(1, false);
                 ivToday.setSelected(true);
                 ivCurrent = ivToday;
                 break;
             case R.id.id_tab_project:
-                viewPager.setCurrentItem(2);
+                viewPager.setCurrentItem(2,false);
                 ivProject.setSelected(true);
                 ivCurrent = ivProject;
         }
