@@ -18,54 +18,64 @@
         android:orientation="horizontal"
         android:baselineAligned="false">
 
-        <!--  Today  -->
+        <!--  Calendar  -->
         <LinearLayout
+            android:id="@+id/id_tab_calendar"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
             android:gravity="center">
             <ImageView
+                android:id="@+id/tab_iv_calendar"
+                android:background="@drawable/tab_calendar"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:background="@drawable/ic_calendar_unselected" />
+                android:contentDescription="@string/calendar_icon" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Today"/>
+                android:text="@string/ic_calendar"/>
         </LinearLayout>
 
+        <!--  Today  -->
         <LinearLayout
+            android:id="@+id/id_tab_today"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
             android:gravity="center">
             <ImageView
-                android:background="@drawable/ic_today_unselected"
+                android:id="@+id/tab_iv_today"
                 android:layout_width="32dp"
-                android:layout_height="32dp"/>
+                android:layout_height="32dp"
+                android:background="@drawable/tab_today"
+                android:contentDescription="@string/today_icon" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calendar"/>
+                android:text="@string/ic_today"/>
         </LinearLayout>
 
+        <!--  Project  -->
         <LinearLayout
+            android:id="@+id/id_tab_project"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
             android:gravity="center">
             <ImageView
-                android:background="@drawable/ic_calendar_selected"
+                android:id="@+id/tab_iv_project"
+                android:background="@drawable/tab_project"
                 android:layout_width="32dp"
-                android:layout_height="32dp"/>
+                android:layout_height="32dp"
+                android:contentDescription="@string/project_icon" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Project"/>
-
+                android:text="@string/ic_project"/>
         </LinearLayout>
 
     </LinearLayout>
