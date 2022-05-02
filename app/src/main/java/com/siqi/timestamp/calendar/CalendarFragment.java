@@ -15,6 +15,7 @@ public class CalendarFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    TopCalendarView topCalendarView;
 
     private String mParam1;
     private String mParam2;
@@ -40,6 +41,7 @@ public class CalendarFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+//        topCalendarView = this.getView().findViewById(R.id.id_cv_weekly_calendar);
     }
 
     @Override

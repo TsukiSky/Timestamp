@@ -3,12 +3,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".calendar.CalendarFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+        <include layout="@layout/layout_top_bar_calendar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022/5/2    Monday"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                />
+            <com.haibin.calendarview.CalendarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:calendar_show_mode="only_month_view">
+                <com.haibin.calendarview.CalendarView
+                    android:id="@+id/id_cv_weekly_calendar"
+                    app:month_view="com.siqi.timestamp.calendar.TopCalendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:calendar_height="40dp"
+                    app:week_background="@android:color/transparent"
+                    app:week_text_color="@color/black"
+                    app:week_text_size="18sp"
+                    app:select_mode="single_mode"
+                    />
+            </com.haibin.calendarview.CalendarLayout>
+        </LinearLayout>
+    </LinearLayout>
+
 
 </FrameLayout>
