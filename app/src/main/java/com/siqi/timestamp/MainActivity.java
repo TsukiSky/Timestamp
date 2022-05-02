@@ -54,7 +54,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager(), getLifecycle(), fragments);
         viewPager.setAdapter(fragmentAdapter);
         viewPager.setCurrentItem(1, false);
+        // disable transformation animation and horizontal sliding
         viewPager.setPageTransformer(null);
+        viewPager.setUserInputEnabled(false);
     }
 
     private void changeTab(int pos){

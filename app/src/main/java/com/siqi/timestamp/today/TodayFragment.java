@@ -46,11 +46,10 @@ public class TodayFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_today, container, false);
-
         initView();
-
         return rootView;
     }
+
 
     private void initView() {
         RecyclerView recyclerViewMustDone = rootView.findViewById(R.id.id_recycler_today_must_done);
@@ -60,11 +59,16 @@ public class TodayFragment extends Fragment {
         Model.EntrySource entrySourceViewLater;
         Model.EntrySource entrySourcePostponed;
 
+        // set recyclerView minimum height
+        recyclerViewMustDone.setMinimumHeight(400);
+        recyclerViewLater.setMinimumHeight(400);
+        recyclerViewPostponed.setMinimumHeight(400);
+
 
         // demo code
         List<Model.Entry> entries = new ArrayList<>();
-        entries.add(new Model.Entry("this is for demo only"));
-        entries.add(new Model.Entry("this is the test for long scaled content, let's see what will happen"));
+        entries.add(new Model.Entry("1. this is for demo only"));
+        entries.add(new Model.Entry("2. this is the test for long scaled content, let's see what will happen"));
         entrySourceMustDone = new Model.EntrySource(entries);
         EntryAdapter entryAdapter = new EntryAdapter(TodayFragment.super.getContext(), entrySourceMustDone);
         recyclerViewMustDone.setAdapter(entryAdapter);

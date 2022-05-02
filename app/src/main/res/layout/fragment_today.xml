@@ -12,116 +12,128 @@
 
         <include layout="@layout/layout_top_bar_today"/>
 
-        <!--    Must Done    -->
-        <LinearLayout
-            android:layout_height="wrap_content"
+        <ScrollView
             android:layout_width="match_parent"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Must Done"
-                android:textSize="24sp"
-                android:textColor="@color/black"
-                android:layout_marginVertical="8dp"
-                android:layout_marginStart="10dp" />
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false">
             <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="end"
-                android:layout_gravity="center"
-                android:layout_marginEnd="8dp">
-                <ImageView
-                    android:id="@+id/id_add_today_must_done"
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
-                    android:background="@drawable/ic_add"
-                    android:contentDescription="@string/add_icon" />
-            </LinearLayout>
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
-            android:background="@drawable/bg_dash_line"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/id_recycler_today_must_done"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"/>
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+                <!--    Must Done    -->
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Must Done"
+                        android:textSize="24sp"
+                        android:textColor="@color/black"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginStart="10dp" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp">
+                        <ImageView
+                            android:id="@+id/id_add_today_must_done"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/ic_add"
+                            android:contentDescription="@string/add_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@drawable/bg_dash_line"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/id_recycler_today_must_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:overScrollMode="never"/>
 
-        <!--    Maybe Later    -->
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Maybe Later"
-                android:textSize="24sp"
-                android:textColor="@color/black"
-                android:layout_marginVertical="8dp"
-                android:layout_marginStart="10dp"/>
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:layout_gravity="center"
-                android:layout_marginEnd="8dp">
-                <ImageView
-                    android:id="@+id/id_add_today_maybe_later"
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
-                    android:background="@drawable/ic_add"
-                    android:contentDescription="@string/add_icon" />
-            </LinearLayout>
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
-            android:background="@drawable/bg_dash_line"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/id_recycler_today_maybe_later"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"/>
+                <!--    Maybe Later    -->
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Maybe Later"
+                        android:textSize="24sp"
+                        android:textColor="@color/black"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginStart="10dp"/>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp">
+                        <ImageView
+                            android:id="@+id/id_add_today_maybe_later"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/ic_add"
+                            android:contentDescription="@string/add_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@drawable/bg_dash_line"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/id_recycler_today_maybe_later"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:overScrollMode="never"/>
 
-        <!--    Can Be Postponed    -->
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Can Be Postponed"
-                android:textSize="24sp"
-                android:textColor="@color/black"
-                android:layout_marginVertical="8dp"
-                android:layout_marginStart="10dp"/>
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:layout_gravity="center"
-                android:layout_marginEnd="8dp">
-                <ImageView
-                    android:id="@+id/id_add_today_postponed"
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
-                    android:background="@drawable/ic_add"
-                    android:contentDescription="@string/add_icon" />
+                <!--    Can Be Postponed    -->
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Can Be Postponed"
+                        android:textSize="24sp"
+                        android:textColor="@color/black"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginStart="10dp"/>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp">
+                        <ImageView
+                            android:id="@+id/id_add_today_postponed"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/ic_add"
+                            android:contentDescription="@string/add_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@drawable/bg_dash_line"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/id_recycler_today_postponed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:overScrollMode="never"/>
             </LinearLayout>
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
-            android:background="@drawable/bg_dash_line"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/id_recycler_today_postponed"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"/>
+        </ScrollView>
     </LinearLayout>
-
 </FrameLayout>
