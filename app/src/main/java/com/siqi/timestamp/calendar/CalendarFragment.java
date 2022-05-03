@@ -20,6 +20,7 @@ public class CalendarFragment extends Fragment {
 
     private View rootView;
     private CalendarView calendarView;
+    int actualCurrentMonth;
 
     public CalendarFragment() {
         // Required empty public constructor
@@ -54,6 +55,8 @@ public class CalendarFragment extends Fragment {
         setTvTodayDate();
         setTvSelectedMonth();
         setTvSelectedDate();
+        java.util.Calendar calendar = java.util.Calendar.getInstance();
+        actualCurrentMonth = calendar.get(java.util.Calendar.MONTH)+1;
 
 
         return rootView;
@@ -70,22 +73,61 @@ public class CalendarFragment extends Fragment {
                 setTvSelectedDate();
             }
         });
+
+        calendarView.setOnMonthChangeListener(new CalendarView.OnMonthChangeListener() {
+            @Override
+            public void onMonthChange(int year, int month) {
+                setChangedMonth(month);
+            }
+        });
+    }
+
+    private void setChangedMonth(int month) {
+        TextView tvSelectedDate = rootView.findViewById(R.id.id_tv_date_calendar);
+        TextView tvSelectedMonth = rootView.findViewById(R.id.id_tv_month_calendar);
+        tvSelectedMonth.setText(new DateFormatSymbols().getMonths()[month-1].toUpperCase());
+        if (month!=actualCurrentMonth){
+            tvSelectedMonth.setBackgroundResource(R.drawable.bg_light_grey_rounded_corner_view);
+            tvSelectedDate.setBackgroundResource(R.drawable.bg_light_grey_rounded_corner_view);
+        }
+        else{
+            tvSelectedMonth.setBackgroundResource(R.drawable.bg_light_red_rounded_corner_view);
+            if (calendarView.getCurDay()!=1){
+                tvSelectedDate.setBackgroundResource(R.drawable.bg_light_grey_rounded_corner_view);
+            }
+            else{
+                tvSelectedDate.setBackgroundResource(R.drawable.bg_light_red_rounded_corner_view);
+            }
+        }
+        tvSelectedDate.setText("1");
     }
 
     private void setTvSelectedDate() {
         TextView tvSelectedDate = rootView.findViewById(R.id.id_tv_date_calendar);
+        tvSelectedDate.setBackgroundResource(R.drawable.bg_light_red_rounded_corner_view);
         int dateSelected = calendarView.getCurDay();
         if (calendarView.getSelectedCalendar().isAvailable()) {
-            dateSelected = calendarView.getSelectedCalendar().getDay();
+            // user reselected some date
+            if (!calendarView.getSelectedCalendar().isCurrentDay()){
+                // selected day is not current day
+                dateSelected = calendarView.getSelectedCalendar().getDay();
+                tvSelectedDate.setBackgroundResource(R.drawable.bg_light_grey_rounded_corner_view);
+            } // else selected day is current day
         }
         tvSelectedDate.setText(String.valueOf(dateSelected));
     }
 
     public void setTvSelectedMonth() {
         TextView tvSelectedMonth = rootView.findViewById(R.id.id_tv_month_calendar);
+        tvSelectedMonth.setBackgroundResource(R.drawable.bg_light_red_rounded_corner_view);
         int monthSelected = calendarView.getCurMonth();
         if (calendarView.getSelectedCalendar().isAvailable()) {
-            monthSelected = calendarView.getSelectedCalendar().getMonth();
+            // user reselected some month
+            if (calendarView.getSelectedCalendar().getMonth()!=actualCurrentMonth) {
+                // selected month is not current month
+                monthSelected = calendarView.getSelectedCalendar().getMonth();
+                tvSelectedMonth.setBackgroundResource(R.drawable.bg_light_grey_rounded_corner_view);
+            } // else selected day is current day
         }
         String month = new DateFormatSymbols().getMonths()[monthSelected - 1].toUpperCase();
         tvSelectedMonth.setText(month);
