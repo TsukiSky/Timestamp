@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/id_cl_entry">
-    <TextView
+    <com.siqi.timestamp.today.RichEditText
         android:id="@+id/id_tv_entry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

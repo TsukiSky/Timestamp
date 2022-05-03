@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.siqi.timestamp.Model;
 import com.siqi.timestamp.R;
@@ -73,5 +74,13 @@ public class TodayFragment extends Fragment {
         EntryAdapter entryAdapter = new EntryAdapter(TodayFragment.super.getContext(), entrySourceMustDone);
         recyclerViewMustDone.setAdapter(entryAdapter);
         recyclerViewMustDone.setLayoutManager(new LinearLayoutManager(TodayFragment.super.getContext()));
+
+        // add icon init
+        ImageView add_today_must_done = rootView.findViewById(R.id.id_add_today_must_done);
+        ImageView add_today_maybe_later = rootView.findViewById(R.id.id_add_today_maybe_later);
+        ImageView add_today_postponed = rootView.findViewById(R.id.id_add_today_postponed);
+
+
+
     }
 }
