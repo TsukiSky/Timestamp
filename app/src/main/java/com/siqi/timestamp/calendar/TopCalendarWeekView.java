@@ -11,13 +11,13 @@ import com.haibin.calendarview.Calendar;
 import com.haibin.calendarview.WeekView;
 import com.siqi.timestamp.R;
 
-public class TopCalendarView extends WeekView {
+public class TopCalendarWeekView extends WeekView {
 
     Paint selectedBlockPaint = new Paint();
     Paint todayBlockPaint = new Paint();
     Paint textPaint = new Paint();
 
-    public TopCalendarView(Context context) {
+    public TopCalendarWeekView(Context context) {
         super(context);
         selectedBlockPaint.setStyle(Paint.Style.FILL);
         selectedBlockPaint.setAntiAlias(true);

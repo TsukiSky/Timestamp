@@ -4,20 +4,20 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.haibin.calendarview.Calendar;
 import com.haibin.calendarview.CalendarView;
 import com.siqi.timestamp.R;
 
 import java.text.DateFormatSymbols;
-import java.util.Calendar;
 
 public class CalendarFragment extends Fragment {
 
-    private TextView tvDate;
     private View rootView;
     private CalendarView calendarView;
 
@@ -49,22 +49,52 @@ public class CalendarFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
-        tvDate = rootView.findViewById(R.id.id_tv_month_calendar);
         calendarView = rootView.findViewById(R.id.id_cv_calendar);
-        initTvTodayDate();
+        innitCalendarView();
+        setTvTodayDate();
+        setTvSelectedMonth();
+        setTvSelectedDate();
 
-
-//        tvDate.setText("iachoac");
 
         return rootView;
     }
 
-    private void initTvTodayDate() {
+    private void innitCalendarView() {
+        calendarView.setOnCalendarSelectListener(new CalendarView.OnCalendarSelectListener() {
+            @Override
+            public void onCalendarOutOfRange(Calendar calendar) {}
+
+            @Override
+            public void onCalendarSelect(Calendar calendar, boolean isClick) {
+                setTvSelectedMonth();
+                setTvSelectedDate();
+            }
+        });
+    }
+
+    private void setTvSelectedDate() {
+        TextView tvSelectedDate = rootView.findViewById(R.id.id_tv_date_calendar);
+        int dateSelected = calendarView.getCurDay();
+        if (calendarView.getSelectedCalendar().isAvailable()) {
+            dateSelected = calendarView.getSelectedCalendar().getDay();
+        }
+        tvSelectedDate.setText(String.valueOf(dateSelected));
+    }
+
+    public void setTvSelectedMonth() {
+        TextView tvSelectedMonth = rootView.findViewById(R.id.id_tv_month_calendar);
+        int monthSelected = calendarView.getCurMonth();
+        if (calendarView.getSelectedCalendar().isAvailable()) {
+            monthSelected = calendarView.getSelectedCalendar().getMonth();
+        }
+        String month = new DateFormatSymbols().getMonths()[monthSelected - 1].toUpperCase();
+        tvSelectedMonth.setText(month);
+    }
+
+    private void setTvTodayDate() {
         TextView tvTodayDate = rootView.findViewById(R.id.id_tv_today_date);
-        Calendar calendar = Calendar.getInstance();
-        int month_today = calendar.get(Calendar.MONTH);
-        int date_today = calendar.get(Calendar.DAY_OF_MONTH);
-        String month = new DateFormatSymbols().getMonths()[month_today].toUpperCase();
-        tvTodayDate.setText("TODAY: "+date_today +" "+month);
+        int monthToday = calendarView.getCurMonth();
+        String month = new DateFormatSymbols().getMonths()[monthToday-1].toUpperCase();
+        tvTodayDate.setText("TODAY: "+calendarView.getCurDay() +" "+month);
     }
 }
