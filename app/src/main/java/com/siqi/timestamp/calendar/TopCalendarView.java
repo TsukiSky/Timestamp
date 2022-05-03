@@ -8,17 +8,16 @@ import android.graphics.RectF;
 import androidx.core.content.ContextCompat;
 
 import com.haibin.calendarview.Calendar;
-import com.haibin.calendarview.MonthView;
 import com.haibin.calendarview.WeekView;
 import com.siqi.timestamp.R;
 
-public class TopCalendarWeekView extends WeekView {
+public class TopCalendarView extends WeekView {
 
     Paint selectedBlockPaint = new Paint();
     Paint todayBlockPaint = new Paint();
     Paint textPaint = new Paint();
 
-    public TopCalendarWeekView(Context context) {
+    public TopCalendarView(Context context) {
         super(context);
         selectedBlockPaint.setStyle(Paint.Style.FILL);
         selectedBlockPaint.setAntiAlias(true);
@@ -77,5 +76,4 @@ public class TopCalendarWeekView extends WeekView {
             canvas.drawText(String.valueOf(calendar.getDay()), x + mItemWidth/2, mTextBaseLine, textPaint);
         }
     }
-
 }

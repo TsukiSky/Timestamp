@@ -9,15 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.haibin.calendarview.CalendarView;
 import com.siqi.timestamp.R;
 
-import java.util.Objects;
+import java.text.DateFormatSymbols;
+import java.util.Calendar;
 
 public class CalendarFragment extends Fragment {
 
-    TextView tvDate;
+    private TextView tvDate;
     private View rootView;
-    TopCalendarMonthView topCalendarMonthView;
+    private CalendarView calendarView;
 
     public CalendarFragment() {
         // Required empty public constructor
@@ -47,9 +49,22 @@ public class CalendarFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
-        tvDate = rootView.findViewById(R.id.id_tv_date_calendar);
-        tvDate.setText("iachoac");
+        tvDate = rootView.findViewById(R.id.id_tv_month_calendar);
+        calendarView = rootView.findViewById(R.id.id_cv_calendar);
+        initTvTodayDate();
+
+
+//        tvDate.setText("iachoac");
 
         return rootView;
+    }
+
+    private void initTvTodayDate() {
+        TextView tvTodayDate = rootView.findViewById(R.id.id_tv_today_date);
+        Calendar calendar = Calendar.getInstance();
+        int month_today = calendar.get(Calendar.MONTH);
+        int date_today = calendar.get(Calendar.DAY_OF_MONTH);
+        String month = new DateFormatSymbols().getMonths()[month_today].toUpperCase();
+        tvTodayDate.setText("TODAY: "+date_today +" "+month);
     }
 }
