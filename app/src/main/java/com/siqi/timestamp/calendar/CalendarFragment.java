@@ -87,13 +87,13 @@ public class CalendarFragment extends Fragment {
         TextView tvSelectedMonth = rootView.findViewById(R.id.id_tv_month_calendar);
         tvSelectedMonth.setText(new DateFormatSymbols().getMonths()[month-1].toUpperCase());
         if (month!=actualCurrentMonth){
-            tvSelectedMonth.setBackgroundResource(R.drawable.bg_light_grey_rounded_corner_view);
-            tvSelectedDate.setBackgroundResource(R.drawable.bg_light_grey_rounded_corner_view);
+            tvSelectedMonth.setBackgroundResource(R.drawable.bg_transparent_rounded_corner_view);
+            tvSelectedDate.setBackgroundResource(R.drawable.bg_transparent_rounded_corner_view);
         }
         else{
             tvSelectedMonth.setBackgroundResource(R.drawable.bg_light_red_rounded_corner_view);
             if (calendarView.getCurDay()!=1){
-                tvSelectedDate.setBackgroundResource(R.drawable.bg_light_grey_rounded_corner_view);
+                tvSelectedDate.setBackgroundResource(R.drawable.bg_transparent_rounded_corner_view);
             }
             else{
                 tvSelectedDate.setBackgroundResource(R.drawable.bg_light_red_rounded_corner_view);
@@ -111,7 +111,7 @@ public class CalendarFragment extends Fragment {
             if (!calendarView.getSelectedCalendar().isCurrentDay()){
                 // selected day is not current day
                 dateSelected = calendarView.getSelectedCalendar().getDay();
-                tvSelectedDate.setBackgroundResource(R.drawable.bg_light_grey_rounded_corner_view);
+                tvSelectedDate.setBackgroundResource(R.drawable.bg_transparent_rounded_corner_view);
             } // else selected day is current day
         }
         tvSelectedDate.setText(String.valueOf(dateSelected));
@@ -126,7 +126,7 @@ public class CalendarFragment extends Fragment {
             if (calendarView.getSelectedCalendar().getMonth()!=actualCurrentMonth) {
                 // selected month is not current month
                 monthSelected = calendarView.getSelectedCalendar().getMonth();
-                tvSelectedMonth.setBackgroundResource(R.drawable.bg_light_grey_rounded_corner_view);
+                tvSelectedMonth.setBackgroundResource(R.drawable.bg_transparent_rounded_corner_view);
             } // else selected day is current day
         }
         String month = new DateFormatSymbols().getMonths()[monthSelected - 1].toUpperCase();

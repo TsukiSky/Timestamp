@@ -8,6 +8,7 @@
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/bg_light_grey_rounded_corner_view.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/bg_light_red_rounded_corner_view.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/bg_rounded_corner_view.xml" value="0.211" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/bg_transparent_rounded_corner_view.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/button_light_style.xml" value="0.11" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/button_light_style_normal.xml" value="0.139" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/button_light_style_onseleced.xml" value="0.1" />
@@ -18,13 +19,13 @@
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/tab_today.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/activity_main.xml" value="0.18857142857142858" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/activity_main2.xml" value="0.2786458333333333" />
-        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/fragment_calendar.xml" value="0.24675324675324675" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/fragment_calendar.xml" value="0.22180451127819548" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/fragment_dashboard.xml" value="0.12864583333333332" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/fragment_main.xml" value="0.23854166666666668" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/fragment_project.xml" value="0.2786458333333333" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/fragment_today.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_bottom_navbar.xml" value="0.3828571428571429" />
-        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_main_calendar.xml" value="0.3828571428571429" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_main_calendar.xml" value="0.17507418397626112" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_today_entry.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_top_bar.xml" value="0.2786458333333333" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_top_bar_calendar.xml" value="0.234375" />
