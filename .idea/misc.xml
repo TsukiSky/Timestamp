@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/bg_dash_line.xml" value="0.1" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/button_light_style.xml" value="0.11" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/button_light_style_normal.xml" value="0.139" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/button_light_style_onseleced.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.153" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.153" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/tab_calendar.xml" value="0.1" />
@@ -17,6 +20,7 @@
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/fragment_project.xml" value="0.2786458333333333" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/fragment_today.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_bottom_navbar.xml" value="0.3828571428571429" />
+        <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_main_calendar.xml" value="0.3392330383480826" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_today_entry.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_top_bar.xml" value="0.2786458333333333" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/layout/layout_top_bar_calendar.xml" value="0.234375" />

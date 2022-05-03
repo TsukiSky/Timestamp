@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/id_tv_date_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2022 MAY"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+
+            android:background="@drawable/button_light_style_normal"
+            android:id="@+id/id_bt_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Month"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            />
+    </LinearLayout>
+
+    <com.haibin.calendarview.CalendarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:calendar_show_mode="both_month_week_view">
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/id_cv_weekly_calendar"
+            app:month_view="com.siqi.timestamp.calendar.TopCalendarMonthView"
+            app:week_view="com.siqi.timestamp.calendar.TopCalendarWeekView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:calendar_height="40dp"
+            app:week_background="@android:color/transparent"
+            app:week_text_color="@color/black"
+            app:week_text_size="18sp"
+            app:select_mode="single_mode"
+            />
+    </com.haibin.calendarview.CalendarLayout>
+
+</LinearLayout>
