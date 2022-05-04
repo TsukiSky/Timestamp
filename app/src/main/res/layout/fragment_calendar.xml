@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical">
-        <include layout="@layout/layout_top_bar_calendar"/>
+<!--        <include layout="@layout/layout_top_bar_calendar"/>-->
         <include layout="@layout/layout_main_calendar"/>
     </LinearLayout>
 </FrameLayout>
