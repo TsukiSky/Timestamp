@@ -16,15 +16,18 @@ public class TopCalendarMonthView extends MonthView {
     Paint selectedBlockPaint = new Paint();
     Paint todayBlockPaint = new Paint();
     Paint textPaint = new Paint();
+
     public TopCalendarMonthView(Context context) {
         super(context);
-        selectedBlockPaint.setStyle(Paint.Style.FILL);
+        selectedBlockPaint.setStyle(Paint.Style.STROKE);
         selectedBlockPaint.setAntiAlias(true);
-        selectedBlockPaint.setColor(ContextCompat.getColor(this.getContext(), R.color.transparent_grey));
+        selectedBlockPaint.setColor(ContextCompat.getColor(this.getContext(), R.color.light_red));
+        selectedBlockPaint.setStrokeWidth(6);
         todayBlockPaint.setStyle(Paint.Style.FILL);
         todayBlockPaint.setAntiAlias(true);
         todayBlockPaint.setColor(ContextCompat.getColor(this.getContext(), R.color.light_red));
-        textPaint.setTextSize(64);
+        textPaint.setTextSize(46);
+        textPaint.setFakeBoldText(true);
         textPaint.setStyle(Paint.Style.FILL);
         textPaint.setTextAlign(Paint.Align.CENTER);
     }
@@ -32,8 +35,7 @@ public class TopCalendarMonthView extends MonthView {
     @Override
     protected boolean onDrawSelected(Canvas canvas, Calendar calendar, int x, int y, boolean hasScheme) {
         if (!calendar.isCurrentDay()){
-            int round_radius = mItemHeight/2;
-            canvas.drawCircle(x+mItemWidth/2, y+round_radius, round_radius, selectedBlockPaint);
+            canvas.drawCircle(x+mItemWidth/2, y+mItemHeight/2, mItemHeight/2, selectedBlockPaint);
         }
         return true;
     }
@@ -47,15 +49,23 @@ public class TopCalendarMonthView extends MonthView {
         if (calendar != null) {
             if (calendar.isCurrentDay()) {
                 // current day
-                int blockLeft = x + (mItemWidth - mItemHeight) / 2;
-                int blockRight = x + (mItemWidth - mItemHeight) / 2 + mItemHeight;
-                RectF block = new RectF(blockLeft, y, blockRight, y + mItemHeight);
-                canvas.drawRoundRect(block, 24f, 24f, todayBlockPaint);
+//                int blockLeft = x + (mItemWidth - mItemHeight) / 2;
+//                int blockRight = x + (mItemWidth - mItemHeight) / 2 + mItemHeight;
+//                RectF block = new RectF(blockLeft, y, blockRight, y + mItemHeight);
+//                canvas.drawRoundRect(block, 24f, 24f, todayBlockPaint);
+                if (isSelected) {
+                    canvas.drawCircle(x + mItemWidth / 2, y + mItemHeight / 2, mItemHeight / 2, todayBlockPaint);
+                    textPaint.setColor(ContextCompat.getColor(this.getContext(), R.color.white));
+                }
+                else{
+                    textPaint.setColor(ContextCompat.getColor(this.getContext(), R.color.light_red));
+                }
             }
 
-            if (isSelected && calendar.isCurrentDay()) {
-                textPaint.setColor(ContextCompat.getColor(this.getContext(), R.color.white));
-            } else {
+//            if (isSelected && calendar.isCurrentDay()) {
+//                textPaint.setColor(ContextCompat.getColor(this.getContext(), R.color.white));
+//            } else {
+            else {
                 int round_radius = mItemHeight / 2;
                 if (isSelected) {
                     // not current day but selected

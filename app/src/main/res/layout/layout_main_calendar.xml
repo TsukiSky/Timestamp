@@ -146,18 +146,20 @@
             app:month_view="com.siqi.timestamp.calendar.TopCalendarMonthView"
             app:week_view="com.siqi.timestamp.calendar.TopCalendarWeekView"
             android:layout_width="match_parent"
+            android:background="@color/slight_grey"
             android:layout_height="wrap_content"
             app:calendar_height="40dp"
             app:week_background="@android:color/transparent"
             app:week_text_color="@color/black"
-            app:week_text_size="18sp"
+            app:week_text_size="14sp"
             app:select_mode="single_mode"
             />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/bgRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff" />
+            android:background="@drawable/bg_calendar_recycler_view" />
+
     </com.haibin.calendarview.CalendarLayout>
 
 </LinearLayout>
