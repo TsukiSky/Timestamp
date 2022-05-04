@@ -120,7 +120,7 @@ public class CalendarFragment extends Fragment {
     }
 
     private void setChangedMonth(int year, int month) {
-        TextView tvSelectedDate = rootView.findViewById(R.id.id_tv_date_calendar);
+//        TextView tvSelectedDate = rootView.findViewById(R.id.id_tv_date_calendar);
         TextView tvSelectedMonth = rootView.findViewById(R.id.id_tv_month_calendar);
         String monthData = year +" "+new DateFormatSymbols().getMonths()[month-1].toUpperCase();
         tvSelectedMonth.setText(monthData);
@@ -137,11 +137,11 @@ public class CalendarFragment extends Fragment {
 //                tvSelectedDate.setBackgroundResource(R.drawable.bg_light_red_rounded_corner_view);
 //            }
 //        }
-        tvSelectedDate.setText("1");
+//        tvSelectedDate.setText("1");
     }
 
     private void setTvSelectedDate() {
-        TextView tvSelectedDate = rootView.findViewById(R.id.id_tv_date_calendar);
+//        TextView tvSelectedDate = rootView.findViewById(R.id.id_tv_date_calendar);
 //        tvSelectedDate.setBackgroundResource(R.drawable.bg_light_red_rounded_corner_view);
         int dateSelected = calendarView.getCurDay();
         if (calendarView.getSelectedCalendar().isAvailable()) {
@@ -152,7 +152,7 @@ public class CalendarFragment extends Fragment {
 //                tvSelectedDate.setBackgroundResource(R.drawable.bg_transparent_rounded_corner_view);
             } // else selected day is current day
         }
-        tvSelectedDate.setText(String.valueOf(dateSelected));
+//        tvSelectedDate.setText(String.valueOf(dateSelected));
     }
 
     public void setTvSelectedMonth() {
@@ -174,9 +174,9 @@ public class CalendarFragment extends Fragment {
     }
 
     private void setTvTodayDate() {
-//        TextView tvTodayDate = rootView.findViewById(R.id.id_tv_today_date);
-//        int monthToday = calendarView.getCurMonth();
-//        String month = new DateFormatSymbols().getMonths()[monthToday-1].toUpperCase();
-//        tvTodayDate.setText("TODAY: "+calendarView.getCurDay() +" "+month);
+        TextView tvTodayDate = rootView.findViewById(R.id.id_tv_today_date);
+        int monthToday = calendarView.getCurMonth();
+        String month = new DateFormatSymbols().getMonths()[monthToday-1].toUpperCase();
+        tvTodayDate.setText(calendarView.getCurDay() +" "+month+" "+calendarView.getCurYear());
     }
 }
