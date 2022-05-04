@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import android.widget.TextView;
 import com.haibin.calendarview.Calendar;
 import com.haibin.calendarview.CalendarLayout;
 import com.haibin.calendarview.CalendarView;
-import com.haibin.calendarview.WeekView;
 import com.siqi.timestamp.R;
 
 import java.text.DateFormatSymbols;
@@ -124,7 +122,7 @@ public class CalendarFragment extends Fragment {
     private void setChangedMonth(int year, int month) {
         TextView tvSelectedDate = rootView.findViewById(R.id.id_tv_date_calendar);
         TextView tvSelectedMonth = rootView.findViewById(R.id.id_tv_month_calendar);
-        String monthData = String.valueOf(year)+" "+new DateFormatSymbols().getMonths()[month-1].toUpperCase();
+        String monthData = year +" "+new DateFormatSymbols().getMonths()[month-1].toUpperCase();
         tvSelectedMonth.setText(monthData);
 //        if (month!=actualCurrentMonth){
 //            tvSelectedMonth.setBackgroundResource(R.drawable.bg_transparent_rounded_corner_view);
@@ -171,14 +169,14 @@ public class CalendarFragment extends Fragment {
 //                tvSelectedMonth.setBackgroundResource(R.drawable.bg_transparent_rounded_corner_view);
             } // else selected day is current day
         }
-        String monthData = String.valueOf(yearSelected)+" "+new DateFormatSymbols().getMonths()[monthSelected - 1].toUpperCase();
+        String monthData = yearSelected +" "+new DateFormatSymbols().getMonths()[monthSelected - 1].toUpperCase();
         tvSelectedMonth.setText(monthData);
     }
 
     private void setTvTodayDate() {
 //        TextView tvTodayDate = rootView.findViewById(R.id.id_tv_today_date);
-        int monthToday = calendarView.getCurMonth();
-        String month = new DateFormatSymbols().getMonths()[monthToday-1].toUpperCase();
+//        int monthToday = calendarView.getCurMonth();
+//        String month = new DateFormatSymbols().getMonths()[monthToday-1].toUpperCase();
 //        tvTodayDate.setText("TODAY: "+calendarView.getCurDay() +" "+month);
     }
 }

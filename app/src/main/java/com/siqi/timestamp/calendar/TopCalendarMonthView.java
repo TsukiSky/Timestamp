@@ -3,7 +3,6 @@ package com.siqi.timestamp.calendar;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.graphics.RectF;
 
 import androidx.core.content.ContextCompat;
 
@@ -66,7 +65,7 @@ public class TopCalendarMonthView extends MonthView {
 //                textPaint.setColor(ContextCompat.getColor(this.getContext(), R.color.white));
 //            } else {
             else {
-                int round_radius = mItemHeight / 2;
+//                int round_radius = mItemHeight / 2;
                 if (isSelected) {
                     // not current day but selected
                     textPaint.setColor(ContextCompat.getColor(this.getContext(), R.color.black));
