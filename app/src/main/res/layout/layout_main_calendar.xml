@@ -120,9 +120,12 @@
     </LinearLayout>
 
     <com.haibin.calendarview.CalendarLayout
+        android:id="@+id/id_calendar_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        app:default_status="expand"
+        app:calendar_content_view_id="@+id/bgRecyclerView"
         app:calendar_show_mode="both_month_week_view">
         <com.haibin.calendarview.CalendarView
             android:id="@+id/id_cv_calendar"
@@ -136,6 +139,11 @@
             app:week_text_size="18sp"
             app:select_mode="single_mode"
             />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bgRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff" />
     </com.haibin.calendarview.CalendarLayout>
 
 </LinearLayout>

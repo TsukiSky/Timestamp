@@ -8,9 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.haibin.calendarview.Calendar;
+import com.haibin.calendarview.CalendarLayout;
 import com.haibin.calendarview.CalendarView;
 import com.siqi.timestamp.R;
 
@@ -21,6 +23,9 @@ public class CalendarFragment extends Fragment {
     private View rootView;
     private CalendarView calendarView;
     int actualCurrentMonth;
+    Button BtMonthView;
+    Button BtWeekView;
+    private CalendarLayout calendarLayout;
 
     public CalendarFragment() {
         // Required empty public constructor
@@ -51,7 +56,9 @@ public class CalendarFragment extends Fragment {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
         calendarView = rootView.findViewById(R.id.id_cv_calendar);
+        calendarLayout = rootView.findViewById(R.id.id_calendar_layout);
         innitCalendarView();
+        innitButton();
         setTvTodayDate();
         setTvSelectedMonth();
         setTvSelectedDate();
@@ -60,6 +67,23 @@ public class CalendarFragment extends Fragment {
 
 
         return rootView;
+    }
+
+    private void innitButton() {
+        BtMonthView = rootView.findViewById(R.id.id_bt_month_calendar);
+        BtMonthView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calendarLayout.expand();
+            }
+        });
+        BtWeekView = rootView.findViewById(R.id.id_bt_week_calendar);
+        BtWeekView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calendarLayout.shrink();
+            }
+        });
     }
 
     private void innitCalendarView() {
@@ -71,6 +95,13 @@ public class CalendarFragment extends Fragment {
             public void onCalendarSelect(Calendar calendar, boolean isClick) {
                 setTvSelectedMonth();
                 setTvSelectedDate();
+            }
+        });
+
+        calendarView.setOnViewChangeListener(new CalendarView.OnViewChangeListener() {
+            @Override
+            public void onViewChange(boolean isMonthView) {
+
             }
         });
 
