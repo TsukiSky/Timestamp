@@ -9,6 +9,7 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.text.style.UnderlineSpan;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +21,17 @@ public class RichEditText extends androidx.appcompat.widget.AppCompatEditText {
         super(context);
     }
 
+    public static final String BOLD = "BOLD";
+    public static final String UNDERLINE = "UNDERLINE";
+    public static final String ITALIC = "ITALIC";
+    public static final String FORE_COLOR = "FORE_COLOR";
+    public static final String BACK_COLOR = "BACK_COLOR";
+
+
+    String wholeText = this.getText().toString();
+    SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(wholeText);
+
+
     public RichEditText(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
@@ -28,45 +40,95 @@ public class RichEditText extends androidx.appcompat.widget.AppCompatEditText {
         super(context, attrs, defStyleAttr);
     }
 
-    
-    public final String BOLD = "BOLD";
-    public final String UNDERLINE = "UNDERLINE";
-    public final String ITALIC = "ITALICD";
-    public final String FORE_COLOR = "FORE_COLOR";
-    public final String BACK_COLOR = "BACK_COLOR";
 
-    String wholeText = this.getText().toString();
-    SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(wholeText);
+    // type applied states
+    boolean isBold = false;
+    boolean isItalic = false;
+    boolean isUnderlined = false;
+    boolean isForecolored = false;
+    boolean isBackcolored = false;
 
 
     // get spanStyle
-    private Object getSpanstyle(String type, int color){
+    private Object[] getSpanstyle(String type, int color){
         switch (type){
             case BOLD:
-                return new StyleSpan(Typeface.BOLD);
+                if (isBold){
+                    isBold = false;
+                    //remove span
+                    return new Object[]{0, new StyleSpan(Typeface.BOLD)};
+                }
+                else {
+                    isBold = true;
+                    // add span
+                    return new Object[]{1, new StyleSpan(Typeface.BOLD)};
+                }
+
             case ITALIC:
-                return new StyleSpan(Typeface.ITALIC);
+                if (isItalic){
+                    isItalic = false;
+                    return new Object[]{0, new StyleSpan(Typeface.ITALIC)};
+                }
+                else {
+                    isItalic = true;
+                    return new Object[]{1, new StyleSpan(Typeface.ITALIC)};
+                }
+
             case UNDERLINE:
-                return new UnderlineSpan();
+                if (isUnderlined){
+                    isUnderlined = false;
+                    return new Object[]{0, new UnderlineSpan()};
+                }
+                else {
+                    isUnderlined =true;
+                    return new Object[]{1, new UnderlineSpan()};
+                }
+
             case FORE_COLOR:
-                return new ForegroundColorSpan(color);
+                if (isForecolored){
+                    isForecolored = false;
+                    return new Object[]{0, new ForegroundColorSpan(Color.BLACK)};
+                }
+                else {
+                    isForecolored = true;
+                    return new Object[]{1, new ForegroundColorSpan(color)};
+                }
+
             case BACK_COLOR:
-                return new BackgroundColorSpan(color);
+                if (isBackcolored){
+                    isBackcolored = false;
+                    return new Object[]{0, new BackgroundColorSpan(color)};
+                }
+                else {
+                    isBackcolored = true;
+                    return new Object[]{1, new BackgroundColorSpan(color)};
+                }
+
             default:
-                return new StyleSpan(Typeface.NORMAL);
+                return new Object[]{1, new StyleSpan(Typeface.NORMAL)};
 
         }
     }
 
     // set spanStyle
-    public void setSpanStyle(Object spanStyle){
+    private void setSpanStyle(Object[] spanStyle){
 
         int start = this.getSelectionStart();
         int end = this.getSelectionEnd();
+        if (spanStyle[0].equals(1)){
+            //Log.i("true", String.valueOf(start)+String.valueOf(end));
+            spannableStringBuilder.setSpan(spanStyle[1] , start, end, 0);
+            this.setText(spannableStringBuilder);
+        }
+        else {
+            //Log.i("flase", String.valueOf(start)+String.valueOf(end));
+            Object[] spans = getEditableText().getSpans(start,end,spanStyle[1].getClass());
+            for (Object span: spans){
+                getEditableText().removeSpan(span);
+            }
 
-        spannableStringBuilder.setSpan(spanStyle , start, end, 0);
-        this.setText(spannableStringBuilder);
-
+            //Log.i("typesfalse",spannableStringBuilder.getSpans(start,end,null).toString());
+        }
     }
 
     // main method for setting text style
@@ -75,6 +137,7 @@ public class RichEditText extends androidx.appcompat.widget.AppCompatEditText {
     }
 
     public void editRichText(String type){
+        //Log.i("isItalic:", String.valueOf(isItalic));
         setSpanStyle(getSpanstyle(type,Color.BLACK));//todo: in case night mode, change to r.id
     }
 }
