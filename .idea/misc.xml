@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/drawable/ic_baseline_text_format_24.xml" value="0.1485" />
+        <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/layout/layout_richeditor_bot_bar.xml" value="0.15260416666666668" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/bg_button_light_style.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/bg_button_light_style_normal.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/bg_button_light_style_selected.xml" value="0.1" />
