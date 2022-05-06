@@ -4,7 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/drawable/ic_baseline_text_format_24.xml" value="0.1485" />
+        <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/layout/activity_additem_richtext.xml" value="0.1625" />
+        <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/layout/activity_main.xml" value="0.178125" />
+        <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/layout/fragment_calendar.xml" value="0.178125" />
+        <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/layout/fragment_today.xml" value="0.178125" />
+        <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/layout/layout_bottom_navbar.xml" value="0.178125" />
         <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/layout/layout_richeditor_bot_bar.xml" value="0.15260416666666668" />
+        <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/layout/layout_richeditor_color_bar.xml" value="0.3333333333333333" />
+        <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/layout/layout_top_bar_calendar.xml" value="0.1625" />
+        <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/layout/layout_top_bar_today.xml" value="0.1625" />
+        <entry key="..\:/AndroidStudio/Projects/Timestamp/app/src/main/res/layout/layput_top_bar_additem.xml" value="0.1625" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/bg_button_light_style.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/bg_button_light_style_normal.xml" value="0.1" />
         <entry key="..\:/Siqi/TimeStamp/app/src/main/res/drawable/bg_button_light_style_selected.xml" value="0.1" />

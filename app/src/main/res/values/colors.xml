@@ -15,4 +15,21 @@
     <color name="light_red">#F05654</color>
     <color name="dark_red">#DC3023</color>
     <color name="main_bg">#FAFAFA</color>
+
+    <!-- editor -->
+    <color name="red">#CC3333</color>
+    <color name="orange">#FF9900</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="yellow_green">#CCCC00</color>
+    <color name="green">#99CC00</color>
+    <color name="cyan">#66CCCC</color>
+    <color name="blue">#3399CC</color>
+    <color name="blue_purple">#6666CC</color>
+    <color name="purple">#9966CC</color>
+    <color name="purple_red">#990066</color>
+    <color name="pink">#FF99CC</color>
+    <color name="brown">#996600</color>
+    <color name="gray">#999999</color>
+
+
 </resources>

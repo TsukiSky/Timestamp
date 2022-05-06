@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/richeditor_color_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/red" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/orange"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/yellow"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/yellow_green"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/green"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/cyan"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/blue"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/blue_purple"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/purple"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/purple_red"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/pink"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/brown"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_rectangle_24"
+        android:layout_gravity="center_horizontal"
+        app:tint="@color/gray"/>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

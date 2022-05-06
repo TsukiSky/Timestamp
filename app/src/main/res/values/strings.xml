@@ -10,4 +10,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_icon">add icon</string>
     <string name="ic_down">ic_down</string>
+    <string name="add_todo">Add TODO</string>
+    <string name="check">check</string>
 </resources>
