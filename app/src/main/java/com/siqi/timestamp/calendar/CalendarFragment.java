@@ -107,7 +107,18 @@ public class CalendarFragment extends Fragment {
         calendarView.setOnViewChangeListener(new CalendarView.OnViewChangeListener() {
             @Override
             public void onViewChange(boolean isMonthView) {
-
+                if (isMonthView){
+                    BtMonthView.setBackgroundResource(R.drawable.bg_button_light_style_selected);
+                    BtWeekView.setBackgroundResource(R.drawable.bg_button_light_style_normal);
+                    BtMonthView.setTextColor(getResources().getColor(R.color.black));
+                    BtWeekView.setTextColor(getResources().getColor(R.color.moderate_grey));
+                }
+                else{
+                    BtMonthView.setBackgroundResource(R.drawable.bg_button_light_style_normal);
+                    BtWeekView.setBackgroundResource(R.drawable.bg_button_light_style_selected);
+                    BtMonthView.setTextColor(getResources().getColor(R.color.moderate_grey));
+                    BtWeekView.setTextColor(getResources().getColor(R.color.black));
+                }
             }
         });
 
