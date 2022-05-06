@@ -55,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_light_red_rounded_corner_view"
                 android:text="3 MAY 2022"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:paddingStart="18dp"
