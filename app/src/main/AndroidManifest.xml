@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Timestamp">
+        <activity android:name=".today.AddItemActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan"

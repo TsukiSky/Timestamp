@@ -26,17 +26,17 @@ public class TodayFragment extends Fragment {
 
     private View rootView;
     // recyclerview
-    RecyclerView recyclerViewMustDone = rootView.findViewById(R.id.id_recycler_today_must_done);
-    RecyclerView recyclerViewLater = rootView.findViewById(R.id.id_recycler_today_maybe_later);
-    RecyclerView recyclerViewPostponed = rootView.findViewById(R.id.id_recycler_today_postponed);
+    RecyclerView recyclerViewMustDone;
+    RecyclerView recyclerViewLater;
+    RecyclerView recyclerViewPostponed;
     Model.EntrySource entrySourceMustDone;
     Model.EntrySource entrySourceViewLater;
     Model.EntrySource entrySourcePostponed;
 
     // add icon init
-    ImageView add_today_must_done = rootView.findViewById(R.id.id_add_today_must_done);
-    ImageView add_today_maybe_later = rootView.findViewById(R.id.id_add_today_maybe_later);
-    ImageView add_today_postponed = rootView.findViewById(R.id.id_add_today_postponed);
+    ImageView add_today_must_done;
+    ImageView add_today_maybe_later;
+    ImageView add_today_postponed;
 
     // add item request
     List<Model.Entry> entries_must_done  = new ArrayList<>();
@@ -80,6 +80,17 @@ public class TodayFragment extends Fragment {
 
 
     private void initView() {
+
+        // recyclerview
+        recyclerViewMustDone = rootView.findViewById(R.id.id_recycler_today_must_done);
+        recyclerViewLater = rootView.findViewById(R.id.id_recycler_today_maybe_later);
+        recyclerViewPostponed = rootView.findViewById(R.id.id_recycler_today_postponed);
+
+
+        // add icon init
+        add_today_must_done = rootView.findViewById(R.id.id_add_today_must_done);
+        add_today_maybe_later = rootView.findViewById(R.id.id_add_today_maybe_later);
+        add_today_postponed = rootView.findViewById(R.id.id_add_today_postponed);
 
         // set recyclerView minimum height
         recyclerViewMustDone.setMinimumHeight(400);

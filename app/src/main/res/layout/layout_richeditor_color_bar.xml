@@ -7,6 +7,7 @@
 
 
     <ImageView
+        android:id="@+id/color_bar_red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -15,6 +16,7 @@
         app:tint="@color/red" />
 
     <ImageView
+        android:id="@+id/color_bar_orange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -23,6 +25,7 @@
         app:tint="@color/orange"/>
 
     <ImageView
+        android:id="@+id/color_bar_yellow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -31,6 +34,7 @@
         app:tint="@color/yellow"/>
 
     <ImageView
+        android:id="@+id/color_bar_yellow_green"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -39,6 +43,7 @@
         app:tint="@color/yellow_green"/>
 
     <ImageView
+        android:id="@+id/color_bar_green"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -47,6 +52,7 @@
         app:tint="@color/green"/>
 
     <ImageView
+        android:id="@+id/color_bar_cyan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -55,6 +61,7 @@
         app:tint="@color/cyan"/>
 
     <ImageView
+        android:id="@+id/color_bar_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -63,6 +70,7 @@
         app:tint="@color/blue"/>
 
     <ImageView
+        android:id="@+id/color_bar_blue_purple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -71,6 +79,7 @@
         app:tint="@color/blue_purple"/>
 
     <ImageView
+        android:id="@+id/color_bar_purple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -79,6 +88,7 @@
         app:tint="@color/purple"/>
 
     <ImageView
+        android:id="@+id/color_bar_purple_red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -87,6 +97,7 @@
         app:tint="@color/purple_red"/>
 
     <ImageView
+        android:id="@+id/color_bar_pink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -95,6 +106,7 @@
         app:tint="@color/pink"/>
 
     <ImageView
+        android:id="@+id/color_bar_brown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -103,6 +115,7 @@
         app:tint="@color/brown"/>
 
     <ImageView
+        android:id="@+id/color_bar_gray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
