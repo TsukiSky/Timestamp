@@ -42,9 +42,11 @@ public class TodayFragment extends Fragment {
     List<Model.Entry> entries_must_done  = new ArrayList<>();
     List<Model.Entry> entries_maybe_later  = new ArrayList<>();
     List<Model.Entry> entries_postpone  = new ArrayList<>();
-    public final static int ADD_MUST_REQUIEST_CODE = 999;
-    public final static int ADD_MAYBE_REQUIEST_CODE = 888;
-    public final static int ADD_POSTPONE_REQUIEST_CODE = 777;
+    public static int adding = 0; // 1: must, 2:maybe, 3: postpone
+    public final static int ADD_MUST_CODE = 1;
+    public final static int ADD_MAYBE_CODE = 2;
+    public final static int ADD_POSTPONE_CODE = 3;
+    public final static int ADDITEM_REQUEST = 9;
     public final static String CONTENT = "CONTENT";
 
     public TodayFragment() {
@@ -117,7 +119,6 @@ public class TodayFragment extends Fragment {
 
     @SuppressLint("NonConstantResourceId")
     private void initAddIcons(ArrayList<View> icons){
-        AtomicInteger request_code = new AtomicInteger();
         for (View icon: icons){
             icon.setOnClickListener(view -> {
 
@@ -125,16 +126,16 @@ public class TodayFragment extends Fragment {
                 Intent addItemIntent = new Intent(getContext(),AddItemActivity.class);
                 switch (icon.getId()){
                     case R.id.id_add_today_must_done:
-                        request_code.set(ADD_MUST_REQUIEST_CODE);
+                        adding = ADD_MUST_CODE;
                         break;
                     case R.id.id_add_today_maybe_later:
-                        request_code.set(ADD_MAYBE_REQUIEST_CODE);
+                        adding = ADD_MAYBE_CODE;
                         break;
                     case R.id.id_add_today_postponed:
-                        request_code.set(ADD_POSTPONE_REQUIEST_CODE);
+                        adding = ADD_POSTPONE_CODE;
                         break;
                 }
-                startActivityForResult(addItemIntent,request_code.get());
+                startActivityForResult(addItemIntent,ADDITEM_REQUEST);
             });
         }
 
@@ -144,17 +145,16 @@ public class TodayFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
         String content;
-        if (resultCode == RESULT_OK) {
-            if(intent!=null){
+        if (resultCode == RESULT_OK && requestCode == ADDITEM_REQUEST && intent!=null){
                 content = intent.getStringExtra(CONTENT);
-                switch (requestCode) {
-                    case ADD_MUST_REQUIEST_CODE:
+                switch (adding) {
+                    case ADD_MUST_CODE:
                          entries_must_done.add(new Model.Entry(content));
                         break;
-                    case ADD_MAYBE_REQUIEST_CODE:
+                    case ADD_MAYBE_CODE:
                         entries_maybe_later.add(new Model.Entry(content));
                         break;
-                    case ADD_POSTPONE_REQUIEST_CODE:
+                    case ADD_POSTPONE_CODE:
                         entries_postpone.add(new Model.Entry(content));
                         break;
                 }
@@ -176,7 +176,7 @@ public class TodayFragment extends Fragment {
                 recyclerViewLater.setLayoutManager(new LinearLayoutManager(TodayFragment.super.getContext()));
                 recyclerViewPostponed.setLayoutManager(new LinearLayoutManager(TodayFragment.super.getContext()));
 
-            }
+
         }
 
     }

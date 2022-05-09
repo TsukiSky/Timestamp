@@ -12,4 +12,5 @@
     <string name="ic_down">ic_down</string>
     <string name="add_todo">Add TODO</string>
     <string name="check">check</string>
+    <string name="what_s_up_today">What\'s up today?</string>
 </resources>

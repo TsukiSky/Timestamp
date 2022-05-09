@@ -116,12 +116,12 @@ public class RichEditText extends androidx.appcompat.widget.AppCompatEditText {
         int start = this.getSelectionStart();
         int end = this.getSelectionEnd();
         if (spanStyle[0].equals(1)){
-            //Log.i("true", String.valueOf(start)+String.valueOf(end));
+            Log.i("setSpanStyle_if", String.valueOf(this.length()));
             spannableStringBuilder.setSpan(spanStyle[1] , start, end, 0);
             this.setText(spannableStringBuilder);
         }
         else {
-            //Log.i("flase", String.valueOf(start)+String.valueOf(end));
+            Log.i("setSpanStyle_else", String.valueOf(start)+String.valueOf(end)+String.valueOf(spanStyle[1] ));
             Object[] spans = getEditableText().getSpans(start,end,spanStyle[1].getClass());
             for (Object span: spans){
                 getEditableText().removeSpan(span);

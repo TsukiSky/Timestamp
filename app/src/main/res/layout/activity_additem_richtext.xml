@@ -12,6 +12,8 @@
         <include layout="@layout/layput_top_bar_additem" />
 
         <com.siqi.timestamp.today.RichEditText
+            android:hint="@string/what_s_up_today"
+            android:id="@+id/richtexteditview_additem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
