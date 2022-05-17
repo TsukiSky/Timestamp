@@ -1,2 +1,2 @@
 # Timestamp
-self-developed app
+ongoing self-developed android time management app
