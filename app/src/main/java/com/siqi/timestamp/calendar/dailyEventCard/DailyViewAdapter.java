@@ -1,5 +1,7 @@
-package com.siqi.timestamp.calendar.dailyInfo;
+package com.siqi.timestamp.calendar.dailyEventCard;
 
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -7,8 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class DailyViewAdapter extends RecyclerView.Adapter<DailyViewAdapter.DailyViewHolder> {
-    public DailyViewAdapter(){
-
+    Context context;
+    LayoutInflater inflater;
+    DailyModel.DataSource dataSource;
+    public DailyViewAdapter(Context context, DailyModel.DataSource dataSource){
+        this.context = context;
+        this.dataSource = dataSource;
     }
 
     @NonNull

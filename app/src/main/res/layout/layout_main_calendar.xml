@@ -158,7 +158,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:default_status="expand"
-        app:calendar_content_view_id="@+id/bgRecyclerView"
         app:calendar_show_mode="both_month_week_view">
         <com.haibin.calendarview.CalendarView
             android:id="@+id/id_cv_calendar"
@@ -174,7 +173,7 @@
             app:select_mode="single_mode"
             />
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/bgRecyclerView"
+            android:id="@+id/id_bg_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bg_calendar_recycler_view" />

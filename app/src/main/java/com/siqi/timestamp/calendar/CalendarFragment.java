@@ -3,6 +3,8 @@ package com.siqi.timestamp.calendar;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,8 @@ import com.haibin.calendarview.Calendar;
 import com.haibin.calendarview.CalendarLayout;
 import com.haibin.calendarview.CalendarView;
 import com.siqi.timestamp.R;
+import com.siqi.timestamp.calendar.dailyEventCard.DailyModel;
+import com.siqi.timestamp.calendar.dailyEventCard.DailyViewAdapter;
 
 import java.text.DateFormatSymbols;
 
@@ -21,6 +25,7 @@ public class CalendarFragment extends Fragment {
 
     private View rootView;
     private CalendarView calendarView;
+    private RecyclerView recyclerView;
     int actualCurrentMonth;
     Button BtMonthView;
     Button BtWeekView;
@@ -56,14 +61,22 @@ public class CalendarFragment extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
         calendarView = rootView.findViewById(R.id.id_cv_calendar);
         calendarLayout = rootView.findViewById(R.id.id_calendar_layout);
+        recyclerView = rootView.findViewById(R.id.id_bg_recyclerView);
         innitCalendarView();
         innitButton();
         setTvTodayDate();
         setTvSelectedMonth();
         setTvSelectedDate();
+        initRecyclerView();
         java.util.Calendar calendar = java.util.Calendar.getInstance();
         actualCurrentMonth = calendar.get(java.util.Calendar.MONTH)+1;
         return rootView;
+    }
+
+    private void initRecyclerView() {
+        recyclerView.setAdapter(new DailyViewAdapter(this.getContext(), new DailyModel.DataSource()));  //TODO: initialize datasource
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+
     }
 
     private void innitButton() {

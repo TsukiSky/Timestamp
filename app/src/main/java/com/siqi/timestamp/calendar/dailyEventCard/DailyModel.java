@@ -1,4 +1,4 @@
-package com.siqi.timestamp.calendar.dailyInfo;
+package com.siqi.timestamp.calendar.dailyEventCard;
 
 public class DailyModel {
     public static class DataSource{
